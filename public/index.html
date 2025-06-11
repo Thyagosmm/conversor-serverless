@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Arquivos Serverless</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Imagem para Tons de Cinza</h1>
+        <p>Selecione uma imagem (JPG, PNG) para converter.</p>
+        
+        <form id="uploadForm">
+            <input type="file" id="fileInput" name="file" accept="image/png, image/jpeg" required>
+            <button type="submit">Converter Arquivo</button>
+        </form>
+        
+        <div id="status"></div>
+        
+        <div id="result" style="display:none;">
+            <h2>Conversão Concluída!</h2>
+            <a id="downloadLink" href="#" target="_blank">Baixar Imagem Convertida</a>
+            <br>
+            <img id="resultImage" src="" alt="Imagem Processada">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
