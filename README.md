@@ -1,5 +1,7 @@
 # Projeto: Conversor de Arquivos com Serverless (FaaS)
 
+![imagem do conversor](image.png)
+
 Este projeto é uma prova de conceito de um sistema de conversão de arquivos baseado em computação serverless, utilizando a plataforma Vercel para hospedagem do frontend e execução da função FaaS (Function as a Service).
 
 A aplicação permite que um usuário envie uma imagem (JPG ou PNG) através de uma interface web simples. Uma função serverless processa essa imagem, convertendo-a para preto e branco, salva o resultado em um serviço de armazenamento em nuvem (Cloudinary) e retorna um link público para visualização e download.
