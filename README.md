@@ -2,7 +2,7 @@
 
 Este projeto é uma prova de conceito de um sistema de conversão de arquivos baseado em computação serverless, utilizando a plataforma Vercel para hospedagem do frontend e execução da função FaaS (Function as a Service).
 
-A aplicação permite que um usuário envie uma imagem (JPG ou PNG) através de uma interface web simples. Uma função serverless processa essa imagem, convertendo-a para tons de cinza, salva o resultado em um serviço de armazenamento em nuvem (Cloudinary) e retorna um link público para visualização e download.
+A aplicação permite que um usuário envie uma imagem (JPG ou PNG) através de uma interface web simples. Uma função serverless processa essa imagem, convertendo-a para preto e branco, salva o resultado em um serviço de armazenamento em nuvem (Cloudinary) e retorna um link público para visualização e download.
 
 ## 🏛️ Arquitetura
 
@@ -11,7 +11,7 @@ A solução utiliza uma arquitetura serverless moderna, combinando a Vercel para
 1.  **Usuário**: Acessa a aplicação web estática hospedada na Vercel.
 2.  **Frontend (HTML/JS)**: A interface, localizada na pasta /public, envia o arquivo de imagem selecionado pelo usuário para um endpoint da nossa API (/api/converter).
 3.  **Vercel Edge Network**: Roteia a requisição HTTP de forma otimizada para a instância mais próxima da nossa função serverless.
-4.  **Função Serverless (Node.js)**: A função na pasta /api é executada. Ela: a. Recebe o arquivo de imagem. b. Processa a imagem em memória, convertendo-a para tons de cinza com a biblioteca sharp. c. Faz o upload da imagem processada para o Cloudinary.
+4.  **Função Serverless (Node.js)**: A função na pasta /api é executada. Ela: a. Recebe o arquivo de imagem. b. Processa a imagem em memória, convertendo-a para preto e branco com a biblioteca sharp. c. Faz o upload da imagem processada para o Cloudinary.
 5.  **Retorno e Download**: O Cloudinary armazena a imagem e retorna uma URL segura. A função envia essa URL de volta para o frontend em um JSON. A interface então exibe a imagem e o link para download.
 
 ## 🚀 Tecnologias Utilizadas

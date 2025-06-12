@@ -1,31 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Arquivos Serverless</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Imagens</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Conversor de Imagem para Tons de Cinza</h1>
-        <p>Selecione uma imagem (JPG, PNG) para converter.</p>
-        
-        <form id="uploadForm">
-            <input type="file" id="fileInput" name="file" accept="image/png, image/jpeg" required>
-            <button type="submit">Converter Arquivo</button>
-        </form>
-        
-        <div id="status"></div>
-        
-        <div id="result" style="display:none;">
-            <h2>Conversão Concluída!</h2>
-            <a id="downloadLink" href="#" target="_blank">Baixar Imagem Convertida</a>
-            <br>
-            <img id="resultImage" src="" alt="Imagem Processada">
+      <h1>Conversor de Imagem para Preto e Branco</h1>
+      <p class="subtitle">
+        Faça o upload de uma imagem (JPG, PNG) para converter instantaneamente.
+      </p>
+
+      <form id="uploadForm">
+        <label for="fileInput" class="file-input-label">
+          <svg
+            class="upload-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>Clique aqui para selecionar um arquivo</span>
+        </label>
+        <input
+          type="file"
+          id="fileInput"
+          name="file"
+          accept="image/png, image/jpeg"
+          required
+          class="file-input"
+        />
+
+        <button type="submit" class="button primary">Converter Arquivo</button>
+      </form>
+
+      <div id="status" class="status-message"></div>
+
+      <div id="result" class="result-container" style="display: none">
+        <h2>Conversão Concluída!</h2>
+        <div class="image-preview">
+          <img id="resultImage" src="" alt="Imagem Processada" />
         </div>
+        <a id="downloadLink" href="#" target="_blank" class="button secondary">
+          <svg
+            class="download-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Baixar Imagem Convertida
+        </a>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

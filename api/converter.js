@@ -31,7 +31,7 @@ module.exports = async (request, response) => {
       try {
         const imageBuffer = Buffer.concat(buffers);
 
-        console.log("Log: Processando imagem para tons de cinza...");
+        console.log("Log: Processando imagem para preto e branco...");
         const processedBuffer = await sharp(imageBuffer)
           .grayscale()
           .png({ quality: 80 })
